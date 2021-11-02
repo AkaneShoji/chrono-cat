@@ -1,3 +1,7 @@
+Copyright (c) 2021 Akane Shoji
+Released under the MIT license
+https://opensource.org/licenses/mit-license.php
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react'
+import AppBar from '@mui/material/AppBar'
+import Toolbar from '@mui/material/Toolbar'
+import Typography from '@mui/material/Typography'
 
 function App() {
+  //cataas
+  const url = `https://cataas.com/cat`
+
+  //clock
+  var start = new Date()
+
+  const [date, setDate] = useState(start)
+  
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setDate(new Date())
+    }, 1000)
+    
+    return () => clearInterval(timer)
+    }, [setDate]
+  )
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AppBar color="default">
+              <Toolbar >
+                  <Typography variant="h6" color="inherit">
+                      ChronoCat
+                  </Typography>  
+              </Toolbar>
+          </AppBar>
+          <Toolbar />
+      <img src={url} alt="cat" />
+
+      <h1>{date.toLocaleTimeString()}  </h1>
+
     </div>
   );
 }
