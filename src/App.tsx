@@ -32,11 +32,12 @@ function App() {
                   </Typography>  
               </Toolbar>
           </AppBar>
-          <Toolbar />
-      <img src={url} alt="cat" />
+      <Toolbar />
+      <div className="cat">
+        <img src={url} alt="cat" />
 
-      <h1>{date.toLocaleTimeString()}  </h1>
-
+        <h1>{date.toLocaleTimeString()}  </h1>
+      </div>
     </div>
   );
 }
