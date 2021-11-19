@@ -1,0 +1,15 @@
+.Cat {
+  position: relative;
+}
+
+.Cat h1 {
+  position: absolute;
+  font-size: 60px;
+  color: white;
+  top: 60%;
+  left: 35vw;
+}
+
+.Cat > img {
+  width: 100%;
+}

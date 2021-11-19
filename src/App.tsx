@@ -2,26 +2,10 @@ import React, { useState, useEffect } from 'react'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
+import Cat from './Cat'
+import './App.css'
 
 function App() {
-  //cataas
-  const url = `https://cataas.com/cat`
-
-  //clock
-  var start = new Date()
-
-  const [date, setDate] = useState(start)
-  
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setDate(new Date())
-    }, 1000)
-    
-    return () => clearInterval(timer)
-    }, [setDate]
-  )
-
   return (
     <div className="App">
       <AppBar color="default">
@@ -31,11 +15,11 @@ function App() {
                   </Typography>  
               </Toolbar>
           </AppBar>
-          <Toolbar />
-      <img src={url} alt="cat" />
-
-      <h1>{date.toLocaleTimeString()}  </h1>
-
+      <Toolbar />
+      <div className="Container">
+        <Cat />
+      </div>
+      
     </div>
   );
 }
