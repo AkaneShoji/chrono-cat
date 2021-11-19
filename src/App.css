@@ -1,26 +1,5 @@
 /* スマートフォンでの表示 */
-
-.cat {
-  position: relative;
-}
-
-.cat h1 {
-  position: absolute;
-  font-size: 60px;
-  color: white;
-  top: 0;
-  left: 0;
-}
-
-* {
-  border: 2px solid gray;
-}
-
-.cat {
-  border: 2px solid blue;
-}
-
-.cat > img {
-  border: 2px solid green;
-  width: 100%;
+.Container {
+  display: flex;
+  margin-top: 20vh;
 }
